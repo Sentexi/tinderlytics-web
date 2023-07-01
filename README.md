@@ -55,28 +55,6 @@ flask run
 Pull requests are welcome! For major changes or significant enhancements, it would be best first to open an issue to discuss what you would like to change or add.
 
 
-1.Fork the repository.
-2.Create your feature branch:
-
-```
-git checkout -b feature/YourFeatureName
-```
-
-3.Commit your changes:
-
-```    
-git commit -am 'Add some feature'
-```
-     
-4.Push to the branch:
-  
-  ```    
-   git push origin feature/YourFeatureName
-   ```
-   
-5.Submit a pull request from your forked repository to incorporate your changes into the main project.
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/) © Your Name
