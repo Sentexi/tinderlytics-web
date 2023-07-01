@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <script src="static/js/upload.js"></script>
+{% endblock %}
+
+{% block content %}
+   <h1>Drag and Drop to Upload Files</h1>
+
+   <div class="drop-zone">Drag and Drop Files Here</div>
+  
+   <div class="uploaded-files">
+      <!-- Uploaded files will appear here -->
+   </div>
+   
+      <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <button type="submit">Upload</button>
+   </form>
+{% endblock %}

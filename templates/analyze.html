@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+#TinderChartContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(90vh - 50px); /* Set desired height for the chart container */
+},
+#TinderChart {
+  height: 100%;
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+   <h1>Analysis Page</h1>
+
+<div id="TinderChartContainer">
+<canvas id="TinderChart"></canvas>
+</div>
+{% endblock %}
+
+{% block footer %}
+<!-- Import analyse.js -->
+<script src="../static/js/analyse.js"></script>
+{% endblock %}
