@@ -1,0 +1,84 @@
+# Tinderlytics
+
+A Flask app that analyzes and transforms a .zip file into an analyzable view from a web interface. It is implemented using Python and Flask.
+
+## Features
+
+- Upload and process a .zip file.
+- Display the analyzed data in an interactive web interface.
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/Sentexi/tinderlytics-web.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd tinderlytics-web/
+   ```
+
+3. Create and activate a virtual environment (optional but recommended):
+   ```
+    source venv/dcripts/activate       # activate virtual environment (Linux)
+    ```
+   
+4. Start the application server:
+  ```bash 
+      flask run
+      
+5.Open your browser, navigate to [http://localhost:5000](http://localhost:5000), and start using your app!
+
+## Usage
+
+1.Ensure that you have activated your virtual environment (if applicable).
+
+2.Launch the Flask development server:
+
+```
+flask run
+```
+
+3.In your browser, go to [http://localhost:5000](http://localhost:5000) to access the web interface.
+
+4.Upload a .zip file containing data for analysis.
+
+5.Once uploaded, analyze and transform the data as desired.
+
+6.Continue exploring other features of the web interface based on your specific implementation details.
+
+
+## Contributing
+
+Pull requests are welcome! For major changes or significant enhancements, it would be best first to open an issue to discuss what you would like to change or add.
+
+
+1.Fork the repository.
+2.Create your feature branch:
+
+```
+git checkout -b feature/YourFeatureName
+```
+
+3.Commit your changes:
+
+```    
+git commit -am 'Add some feature'
+```
+     
+4.Push to the branch:
+  
+  ```    
+   git push origin feature/YourFeatureName
+   ```
+   
+5.Submit a pull request from your forked repository to incorporate your changes into the main project.
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/) © Your Name
+
+
+``` 
