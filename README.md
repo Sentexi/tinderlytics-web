@@ -42,7 +42,7 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
       ./start.sh
   ```
 
-3. In your browser, go to [http://localhost:5000](http://localhost:5000) to access the web interface.
+3. In your browser, go to [http://localhost:7997](http://localhost:7997) to access the web interface.
 
 4. Upload a .zip file containing data for analysis.
 
