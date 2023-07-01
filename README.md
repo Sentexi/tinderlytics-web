@@ -35,19 +35,19 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
 
 1. Modify the start.sh to your liking
 
-2.Launch the Flask server:
+2. Launch the Flask server:
 
   ```bash 
       ./start.sh
   ```
 
-3.In your browser, go to [http://localhost:5000](http://localhost:5000) to access the web interface.
+3. In your browser, go to [http://localhost:5000](http://localhost:5000) to access the web interface.
 
-4.Upload a .zip file containing data for analysis.
+4. Upload a .zip file containing data for analysis.
 
-5.Once uploaded, analyze and transform the data as desired.
+5. Once uploaded, analyze and transform the data as desired.
 
-6.Continue exploring other features of the web interface based on your specific implementation details.
+6. Continue exploring other features of the web interface based on your specific implementation details.
 
 
 ## Contributing
