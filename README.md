@@ -7,7 +7,7 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
 - Upload and process a .zip file.
 - Display the analyzed data in an interactive web interface.
 
-## Installation
+## Development
 
 1. Clone the repository:
    ```
@@ -33,13 +33,13 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
 
 ## Usage
 
-1.Ensure that you have activated your virtual environment (if applicable).
+1. Modify the start.sh to your liking
 
-2.Launch the Flask development server:
+2.Launch the Flask server:
 
-```
-flask run
-```
+  ```bash 
+      ./start.sh
+  ```
 
 3.In your browser, go to [http://localhost:5000](http://localhost:5000) to access the web interface.
 
