@@ -27,8 +27,9 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
 4. Start the application server:
   ```bash 
       flask run
+  ```
       
-5.Open your browser, navigate to [http://localhost:5000](http://localhost:5000), and start using your app!
+5. Open your browser, navigate to [http://localhost:5000](http://localhost:5000), and start using your app!
 
 ## Usage
 
