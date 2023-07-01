@@ -22,7 +22,7 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
 
 3. Create and activate a virtual environment (optional but recommended):
    ```
-    source venv/dcripts/activate       # activate virtual environment (Linux)
+    source venv/bin/activate       # activate virtual environment (Linux)
     ```
    
 4. Start the application server:
