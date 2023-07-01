@@ -1,3 +1,4 @@
+Currently hosted on: https://tinderlytics.com/
 # Tinderlytics
 
 A Flask app that analyzes and transforms a .zip file into an analyzable view from a web interface. It is implemented using Python and Flask.
