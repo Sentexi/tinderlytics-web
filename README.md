@@ -58,7 +58,7 @@ Pull requests are welcome! For major changes or significant enhancements, it wou
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/) © Your Name
+[MIT](https://choosealicense.com/licenses/mit/) © Andrey Belkin
 
 
 ``` 
