@@ -40,6 +40,38 @@ def upload():
         #return redirect(f'/analyze/{unique_identifier}') 
         return unique_identifier
         pass
+
+#This route does not return the analyze ID but instead directly redirects to the url    
+@app.route('/upload2', methods=['POST'])
+def upload2():
+    if 'file' not in request.files:
+        return redirect(request.url)
+    
+    file = request.files['file']
+    
+    if file.filename == '':
+        return redirect(request.url)
+    
+    if file:
+        # generate unique identifier using random number with 9 digits
+        unique_identifier = str(random.randint(100000000, 999999999))
+        
+        # create directory if it doesn't exist
+        data_folder = 'Data'
+        if not os.path.exists(data_folder):
+            os.makedirs(data_folder)
+        
+        # create subdirectory using unique identifier (if desired)
+        sub_directory = os.path.join(data_folder, f"{unique_identifier}")
+        os.makedirs(sub_directory)
+        
+        # save the uploaded file inside subdirectory with filename "myData.zip"
+        filepath = os.path.join(sub_directory, "myData.zip")
+        file.save(filepath)
+        
+        return redirect(f'/analyze/{unique_identifier}') 
+        #return unique_identifier
+        pass
         
 @app.route('/analyze/<identifier>')
 def analyze(identifier):
