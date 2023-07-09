@@ -2,19 +2,56 @@
 
 {% block header %}
     <script src="static/js/upload.js"></script>
+	
+	<style>
+	.drop-zone {
+		width: 400px;
+		height: 300px;
+		border: 2px dashed #ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position:relative;
+	}
+   
+   .file-hover {
+	   background-color : lightblue !important ;
+   }    
+	</style>
 {% endblock %}
 
 {% block content %}
-   <h1>Drag and Drop to Upload Files</h1>
+   <h1>Upload Page</h1>
 
-   <div class="drop-zone">Drag and Drop Files Here</div>
+   <div id="drop-zone" class="drop-zone">Drag and Drop Files Here</div>
   
    <div class="uploaded-files">
       <!-- Uploaded files will appear here -->
    </div>
    
-      <form action="/upload2" method="post" enctype="multipart/form-data">
-      <input type="file" name="file">
-      <button type="submit">Upload</button>
+	For mobile users:
+	<form action="/upload2" method="post" enctype="multipart/form-data">
+	<input type="file" name="file">
+	<button type="submit">Upload</button>
    </form>
 {% endblock %}
+
+{% block footer %}
+<script>    
+document.getElementById('drop-zone').addEventListener('dragenter', handleDragEnter);
+document.getElementById('drop-zone').addEventListener('dragleave', handleDragLeave);
+document.getElementById('drop-zone').addEventListener('dragover', handleDragOver);
+
+function handleDragEnter(event) {
+    event.target.classList.add("file-hover");
+}
+
+function handleDragLeave(event) {
+    event.target.classList.remove("file-hover");
+}
+
+function handleDragOver(e){
+    e.preventDefault();
+}
+</script>
+{%endblock %}
