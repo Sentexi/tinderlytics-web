@@ -22,15 +22,20 @@ A Flask app that analyzes and transforms a .zip file into an analyzable view fro
 
 3. Create and activate a virtual environment (optional but recommended):
    ```
+    python -m venv venv
     source venv/bin/activate       # activate virtual environment (Linux)
     ```
+4. Install requirements
+   ```
+   pip install -r requirements.txt
+   ```
    
-4. Start the application server:
+5. Start the application server:
   ```bash 
       flask run
   ```
       
-5. Open your browser, navigate to [http://localhost:5000](http://localhost:5000), and start using your app!
+6. Open your browser, navigate to [http://localhost:5000](http://localhost:5000), and start using your app!
 
 ## Usage
 
