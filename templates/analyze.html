@@ -1,32 +1,82 @@
-{% extends 'base.html' %}
+   {% extends 'base.html' %}
 
-{% block header %}
-<!-- Include Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   {% block header %}
+   <!-- Include Chart.js -->
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<style>
-#TinderChartContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(90vh - 50px); /* Set desired height for the chart container */
-},
-#TinderChart {
-  height: 100%;
-}
-</style>
+   <style>
+   #TinderChartContainer{
+     justify-content: center;
+     align-items: center;
+     height: calc(90vh - 50px); /* Set desired height for the chart container */
+   }
+   #TinderChart7D {
+     height: 100%;
+     display: none; /* Hide the chart initially */
+   }
+   #TinderChart30D {
+     height: 100%;
+     display: none; /* Hide the chart initially */
+   }
+   .toggle-buttons {
+      display: flex;
+   }
+   .toggle-buttons button {
+      border: none;
+      background-color: #ccc;
+      color: #000;
+      padding: 10px 20px;
+      cursor: pointer;
+      outline: none;
+   }
+   .toggle-buttons button.active {
+      background-color: #2196F3;
+      color: #fff;
+   }
+   </style>
 
 {% endblock %}
-
 {% block content %}
-   <h1>Analysis Page</h1>
+<h1>
+Analysis Page
+</h1>
+  <div class="toggle-buttons">
+     <button id="sevenDaysButton" class="active">7D Analysis</button>
+     <button id="thirtyDaysButton">30D Analysis</button>
+  </div>
 
-<div id="TinderChartContainer">
-<canvas id="TinderChart"></canvas>
-</div>
+  <div id="TinderChartContainer">
+     <canvas id="TinderChart7D"></canvas>
+     <canvas id="TinderChart30D"></canvas>
+  </div>
 {% endblock %}
+
 
 {% block footer %}
-<!-- Import analyse.js -->
-<script src="../static/js/analyse.js"></script>
+<script src="../static/js/analyse7D.js"></script>
+<script src="../static/js/analyse30D.js"></script>
+
+<script>
+
+var sevenDaysButton = document.getElementById("sevenDaysButton");
+var thirtyDaysButton = document.getElementById("thirtyDaysButton");
+var tinderChartContainer = document.getElementById("TinderChartContainer");
+var tinderChart7d = document.getElementById("TinderChart7D");
+var tinderChart30d = document.getElementById("TinderChart30D");
+     // Seven Days button click event listener
+     sevenDaysButton.addEventListener("click", function() {
+        sevenDaysButton.classList.add("active"); // Set Seven Days button as active
+        thirtyDaysButton.classList.remove("active"); // Set Thirty Days button as inactive
+        tinderChart7d.style.display = "block"; // Show the 7D chart
+        tinderChart30d.style.display = "none"; // Hide the 30D chart
+     });
+
+     // Thirty Days button click event listener
+     thirtyDaysButton.addEventListener("click", function() {
+        thirtyDaysButton.classList.add("active"); // Set Thirty Days button as active
+        sevenDaysButton.classList.remove("active"); // Set Seven Days button as inactive
+        tinderChart7d.style.display = "none"; // Hide the 7D chart
+        tinderChart30d.style.display = "block"; // Show the 30D chart
+     });
+  </script>
 {% endblock %}

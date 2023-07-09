@@ -103,5 +103,20 @@ def tinder7d(identifier):
     # Send CSV file as a response
     return send_file(csv_filepath)
 
+@app.route('/tinder30D/<identifier>')
+def tinder30d(identifier):
+    filepath = os.path.join('Data', identifier, "myData")
+    
+    # Check if Tinder7D.csv exists in /Data/<identifier>
+    csv_filepath = os.path.join(filepath, 'Tinder30D.csv')
+    if not os.path.isfile(csv_filepath):
+        return "CSV file not found"
+    
+    # Set the appropriate filename for download
+    csv_filename = f'{identifier}_Tinder30D.csv'
+
+    # Send CSV file as a response
+    return send_file(csv_filepath)
+
 if __name__ == "__main__":
    app.run(debug=True)
